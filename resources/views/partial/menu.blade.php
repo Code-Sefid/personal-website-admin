@@ -75,7 +75,7 @@
             </a>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item {{ request()->route()->getName() == 'admin.users' ? 'active':''}}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Layouts">Users</div>
@@ -85,6 +85,28 @@
                 <li class="menu-item {{ request()->route()->getName() == 'admin.users' ? 'active':''}}">
                     <a href="{{ route('admin.users') }}" class="menu-link">
                         <div data-i18n="Without menu">List</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+        <li class="menu-item {{ request()->route()->getName() == 'admin.articles' ? 'active':''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bxl-blogger"></i>
+                <div data-i18n="Layouts">Articles</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item {{ request()->route()->getName() == 'admin.articles' ? 'active':''}}">
+                    <a href="{{ route('admin.articles') }}" class="menu-link">
+                        <div data-i18n="Without menu">List</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ request()->route()->getName() == 'admin.articles.create' ? 'active':''}}">
+                    <a href="{{ route('admin.articles.create') }}" class="menu-link">
+                        <div data-i18n="Without menu">Add new article</div>
                     </a>
                 </li>
             </ul>
