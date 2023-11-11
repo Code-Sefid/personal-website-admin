@@ -43,6 +43,8 @@
     <script src="{{asset("assets/vendor/js/helpers.js")}}"></script>
 
     <script src="{{asset("assets/js/config.js")}}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
     @livewireStyles
 
 </head>
